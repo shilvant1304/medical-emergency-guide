@@ -125,15 +125,15 @@ const DiseasePage = () => {
 
               {/* Causes */}
               {disease.causes && disease.causes.length > 0 && (
-                <section className="rounded-xl border-2 border-red-400 dark:border-red-600 bg-gradient-to-br from-red-100 dark:from-red-950 to-red-50 dark:to-red-900 p-6 shadow-md">
-                  <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-red-900 dark:text-red-300">
-                    <Microscope className="h-5 w-5 text-red-700 dark:text-red-400" />
+                <section className="rounded-xl border-2 border-red-400 dark:border-rose-400 bg-gradient-to-br from-red-100 dark:from-slate-800 to-red-50 dark:to-slate-700 p-6 shadow-md">
+                  <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-red-900 dark:text-rose-300">
+                    <Microscope className="h-5 w-5 text-red-700 dark:text-rose-300" />
                     Causes
                   </h2>
                   <ul className="space-y-2">
                     {disease.causes.map((cause, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm text-red-950 dark:text-red-100 font-medium">
-                        <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-red-700 dark:bg-red-300" />
+                      <li key={i} className="flex items-start gap-3 text-sm text-red-950 dark:text-rose-100 font-medium">
+                        <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-red-700 dark:bg-rose-400" />
                         {cause}
                       </li>
                     ))}
@@ -143,15 +143,15 @@ const DiseasePage = () => {
 
               {/* Prevention */}
               {disease.prevention && disease.prevention.length > 0 && (
-                <section className="rounded-xl border-2 border-green-400 dark:border-green-600 bg-gradient-to-br from-green-150 dark:from-green-950 to-green-50 dark:to-green-900 p-6 shadow-md">
-                  <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-green-900 dark:text-green-300">
-                    <Shield className="h-5 w-5 text-green-700 dark:text-green-400" />
+                <section className="rounded-xl border-2 border-green-400 dark:border-emerald-400 bg-gradient-to-br from-green-150 dark:from-slate-800 to-green-50 dark:to-slate-700 p-6 shadow-md">
+                  <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-green-900 dark:text-emerald-300">
+                    <Shield className="h-5 w-5 text-green-700 dark:text-emerald-300" />
                     Prevention Measures
                   </h2>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {disease.prevention.map((prev, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm text-green-950 dark:text-green-100 font-medium">
-                        <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-green-700 dark:bg-green-300 flex-shrink-0" />
+                      <li key={i} className="flex items-start gap-3 text-sm text-green-950 dark:text-emerald-100 font-medium">
+                        <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-green-700 dark:bg-emerald-400 flex-shrink-0" />
                         {prev}
                       </li>
                     ))}
@@ -160,15 +160,15 @@ const DiseasePage = () => {
               )}
 
               {/* Symptoms */}
-              <section className="rounded-xl border-2 border-orange-400 dark:border-orange-600 bg-gradient-to-br from-orange-150 dark:from-orange-950 to-orange-50 dark:to-orange-900 p-6 slide-up shadow-md">
-                <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-orange-900 dark:text-orange-300">
-                  <AlertTriangle className="h-5 w-5 text-orange-700 dark:text-orange-400" />
+              <section className="rounded-xl border-2 border-orange-400 dark:border-amber-400 bg-gradient-to-br from-orange-150 dark:from-slate-800 to-orange-50 dark:to-slate-700 p-6 slide-up shadow-md">
+                <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-orange-900 dark:text-amber-300">
+                  <AlertTriangle className="h-5 w-5 text-orange-700 dark:text-amber-300" />
                   Symptoms & Signs
                 </h2>
                 <ul className="space-y-2">
                   {disease.symptoms.map((s, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-orange-950 dark:text-orange-100 font-medium">
-                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-orange-700 dark:bg-orange-300" />
+                    <li key={i} className="flex items-start gap-3 text-sm text-orange-950 dark:text-amber-100 font-medium">
+                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-orange-700 dark:bg-amber-400" />
                       {s}
                     </li>
                   ))}
@@ -176,33 +176,33 @@ const DiseasePage = () => {
               </section>
 
               {/* Immediate Actions */}
-              <section className="rounded-xl border-2 border-green-500 dark:border-green-600 bg-gradient-to-br from-green-100 dark:from-green-950 to-green-50 dark:to-green-900 p-6 slide-up shadow-md">
-                <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-green-900 dark:text-green-300">
-                  <CheckCircle2 className="h-5 w-5 text-green-700 dark:text-green-400" />
+              <section className="rounded-xl border-2 border-green-500 dark:border-emerald-400 bg-gradient-to-br from-green-100 dark:from-slate-800 to-green-50 dark:to-slate-700 p-6 slide-up shadow-md">
+                <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-green-900 dark:text-emerald-300">
+                  <CheckCircle2 className="h-5 w-5 text-green-700 dark:text-emerald-300" />
                   Immediate Actions to Take
                 </h2>
                 <ol className="space-y-3">
                   {disease.immediateActions.map((a) => (
                     <li key={a.step} className="flex items-start gap-3">
-                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green-600 dark:bg-green-500 text-xs font-bold text-white">
+                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green-600 dark:bg-emerald-500 text-xs font-bold text-white">
                         {a.step}
                       </span>
-                      <span className="text-sm text-green-950 dark:text-green-100 pt-0.5 font-bold">{a.action}</span>
+                      <span className="text-sm text-green-950 dark:text-emerald-100 pt-0.5 font-bold">{a.action}</span>
                     </li>
                   ))}
                 </ol>
               </section>
 
               {/* Do NOTs */}
-              <section className="rounded-xl border-2 border-red-500 dark:border-red-600 bg-gradient-to-br from-red-150 dark:from-red-950 to-red-50 dark:to-red-900 p-6 slide-up shadow-md">
-                <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-red-900 dark:text-red-300">
-                  <XCircle className="h-5 w-5 text-red-700 dark:text-red-400" />
+              <section className="rounded-xl border-2 border-red-500 dark:border-rose-400 bg-gradient-to-br from-red-150 dark:from-slate-800 to-red-50 dark:to-slate-700 p-6 slide-up shadow-md">
+                <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-red-900 dark:text-rose-300">
+                  <XCircle className="h-5 w-5 text-red-700 dark:text-rose-300" />
                   What NOT to Do
                 </h2>
                 <ul className="space-y-2">
                   {disease.doNots.map((d, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-red-950 dark:text-red-100 font-medium">
-                      <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-red-700 dark:text-red-400 flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-3 text-sm text-red-950 dark:text-rose-100 font-medium">
+                      <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-red-700 dark:text-rose-400 flex-shrink-0" />
                       {d}
                     </li>
                   ))}
@@ -226,9 +226,9 @@ const DiseasePage = () => {
               </section>
 
               {/* Footer Note */}
-              <div className="mt-8 p-6 rounded-xl border-2 border-amber-500 dark:border-amber-600 bg-gradient-to-r from-amber-200 dark:from-amber-950 to-amber-100 dark:to-amber-900">
-                <p className="text-sm text-amber-950 dark:text-amber-100 leading-relaxed font-medium">
-                  <strong className="text-amber-900 dark:text-amber-300">⚠️ Disclaimer:</strong> This information is for educational purposes only and not a substitute for professional medical advice. Always consult qualified healthcare providers for diagnosis and treatment. In case of emergency, call 108 immediately.
+              <div className="mt-8 p-6 rounded-xl border-2 border-amber-500 dark:border-orange-400 bg-gradient-to-r from-amber-200 dark:from-slate-800 to-amber-100 dark:to-slate-700">
+                <p className="text-sm text-amber-950 dark:text-orange-100 leading-relaxed font-medium">
+                  <strong className="text-amber-900 dark:text-orange-300">⚠️ Disclaimer:</strong> This information is for educational purposes only and not a substitute for professional medical advice. Always consult qualified healthcare providers for diagnosis and treatment. In case of emergency, call 108 immediately.
                 </p>
               </div>
             </div>
