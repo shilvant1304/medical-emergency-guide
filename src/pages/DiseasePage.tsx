@@ -114,9 +114,9 @@ const DiseasePage = () => {
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {disease.riskFactors.map((factor, i) => (
-                      <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-indigo-100 to-indigo-50 border border-indigo-200">
-                        <span className="mt-1 h-2.5 w-2.5 rounded-full bg-indigo-600 flex-shrink-0" />
-                        <span className="text-sm text-foreground font-medium">{factor}</span>
+                      <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-purple-200 border-2 border-purple-400">
+                        <span className="mt-1 h-2.5 w-2.5 rounded-full bg-purple-700 flex-shrink-0" />
+                        <span className="text-sm text-purple-950 font-semibold">{factor}</span>
                       </div>
                     ))}
                   </div>
@@ -226,9 +226,9 @@ const DiseasePage = () => {
               </section>
 
               {/* Footer Note */}
-              <div className="mt-8 p-6 rounded-xl border border-yellow-200 bg-gradient-to-r from-yellow-50 to-amber-50">
-                <p className="text-xs text-foreground/70 leading-relaxed">
-                  <strong>Disclaimer:</strong> This information is for educational purposes only and not a substitute for professional medical advice. Always consult qualified healthcare providers for diagnosis and treatment. In case of emergency, call 108 immediately.
+              <div className="mt-8 p-6 rounded-xl border-2 border-amber-500 bg-gradient-to-r from-amber-200 to-amber-100">
+                <p className="text-sm text-amber-950 leading-relaxed font-medium">
+                  <strong className="text-amber-900">⚠️ Disclaimer:</strong> This information is for educational purposes only and not a substitute for professional medical advice. Always consult qualified healthcare providers for diagnosis and treatment. In case of emergency, call 108 immediately.
                 </p>
               </div>
             </div>
