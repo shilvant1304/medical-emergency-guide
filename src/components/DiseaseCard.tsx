@@ -1,4 +1,4 @@
-import { ChevronRight, AlertCircle, Heart, Virus, Zap, Baby, Wind } from "lucide-react";
+import { ChevronRight, AlertCircle, Heart, Activity, Zap, Baby, Wind } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Disease } from "@/data/diseases";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -11,7 +11,7 @@ interface DiseaseCardProps {
 const categoryIcons: Record<string, React.ReactNode> = {
   cardiac: <Heart className="h-4 w-4" />,
   respiratory: <Wind className="h-4 w-4" />,
-  infectious: <Virus className="h-4 w-4" />,
+  infectious: <Activity className="h-4 w-4" />,
   injury: <AlertCircle className="h-4 w-4" />,
   poisoning: <Zap className="h-4 w-4" />,
   pediatric: <Baby className="h-4 w-4" />,
