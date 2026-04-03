@@ -5,10 +5,10 @@ const DisclaimerBanner = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="border-b border-warning/30 bg-warning/10 px-4 py-2.5">
-      <div className="container flex items-start gap-2 text-xs sm:text-sm">
-        <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-warning" />
-        <p className="text-foreground/80">{t("app.disclaimer")}</p>
+    <div className="border-b border-red-200 bg-gradient-to-r from-red-50 to-red-100/50 px-4 py-3">
+      <div className="container flex items-start gap-2.5 text-xs sm:text-sm">
+        <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-red-600" />
+        <p className="font-medium text-red-900">{t("app.disclaimer")}</p>
       </div>
     </div>
   );
