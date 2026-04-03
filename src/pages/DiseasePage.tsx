@@ -109,14 +109,14 @@ const DiseasePage = () => {
               {disease.riskFactors && disease.riskFactors.length > 0 && (
                 <section className="rounded-xl border border-border bg-card p-6">
                   <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-foreground">
-                    <TrendingUp className="h-5 w-5 text-orange-600" />
+                    <TrendingUp className="h-5 w-5 text-indigo-600" />
                     Risk Factors
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {disease.riskFactors.map((factor, i) => (
-                      <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-orange-50">
-                        <span className="mt-1 h-2 w-2 rounded-full bg-orange-600 flex-shrink-0" />
-                        <span className="text-sm text-foreground/80">{factor}</span>
+                      <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-indigo-100 to-indigo-50 border border-indigo-200">
+                        <span className="mt-1 h-2.5 w-2.5 rounded-full bg-indigo-600 flex-shrink-0" />
+                        <span className="text-sm text-foreground font-medium">{factor}</span>
                       </div>
                     ))}
                   </div>
