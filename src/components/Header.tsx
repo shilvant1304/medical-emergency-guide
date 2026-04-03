@@ -1,4 +1,4 @@
-import { Phone, Globe, Heart, LogOut } from "lucide-react";
+import { Phone, Globe, Heart, LogOut, Moon, Sun } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { languageNames, Language } from "@/data/translations";
 import { Link, useNavigate } from "react-router-dom";
@@ -15,13 +15,27 @@ const Header = () => {
   const { language, setLanguage, t } = useLanguage();
   const navigate = useNavigate();
   const [user, setUser] = useState<User | null>(null);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
       setUser(JSON.parse(storedUser));
     }
+    // Check system preference and stored preference
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const shouldBeDark = savedTheme === "dark" || (savedTheme !== "light" && prefersDark);
+    setIsDark(shouldBeDark);
+    document.documentElement.classList.toggle("dark", shouldBeDark);
   }, []);
+
+  const toggleTheme = () => {
+    const newIsDark = !isDark;
+    setIsDark(newIsDark);
+    localStorage.setItem("theme", newIsDark ? "dark" : "light");
+    document.documentElement.classList.toggle("dark", newIsDark);
+  };
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -44,6 +58,18 @@ const Header = () => {
         </Link>
 
         <div className="flex items-center gap-3">
+          <button
+            onClick={toggleTheme}
+            className="flex items-center justify-center h-10 w-10 rounded-lg border border-border bg-secondary hover:bg-secondary/80 transition-colors"
+            title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {isDark ? (
+              <Sun className="h-4 w-4 text-yellow-500" />
+            ) : (
+              <Moon className="h-4 w-4 text-slate-600" />
+            )}
+          </button>
+
           <div className="flex items-center gap-1.5 rounded-lg border border-border bg-secondary px-3 py-1.5">
             <Globe className="h-4 w-4 text-muted-foreground" />
             <select
