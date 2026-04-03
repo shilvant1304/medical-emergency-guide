@@ -1,15 +1,20 @@
 import { Phone, Globe, Heart, LogOut } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { languageNames, Language } from "@/data/translations";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 
+interface User {
+  username: string;
+  email: string;
+  role: string;
+}
+
 const Header = () => {
   const { language, setLanguage, t } = useLanguage();
   const navigate = useNavigate();
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
@@ -39,7 +44,6 @@ const Header = () => {
         </Link>
 
         <div className="flex items-center gap-3">
-          <ThemeToggle />
           <div className="flex items-center gap-1.5 rounded-lg border border-border bg-secondary px-3 py-1.5">
             <Globe className="h-4 w-4 text-muted-foreground" />
             <select
@@ -55,10 +59,10 @@ const Header = () => {
             </select>
           </div>
 
-          {user ? (
+          {user && (
             <div className="flex items-center gap-2">
               <span className="text-sm font-medium text-foreground hidden sm:inline">
-                {user.name}
+                {user.username}
               </span>
               <Button
                 onClick={handleLogout}
@@ -69,19 +73,6 @@ const Header = () => {
                 <LogOut className="h-4 w-4" />
                 <span className="hidden sm:inline">Logout</span>
               </Button>
-            </div>
-          ) : (
-            <div className="flex items-center gap-2">
-              <Link to="/login">
-                <Button variant="outline" size="sm">
-                  Login
-                </Button>
-              </Link>
-              <Link to="/register" className="hidden sm:block">
-                <Button size="sm">
-                  Register
-                </Button>
-              </Link>
             </div>
           )}
 
